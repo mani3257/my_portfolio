@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, Download, ExternalLink, Code, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import profileImage from '@/assets/profile-image.jpg';
+
 
 const Index = () => {
   const [typedText, setTypedText] = useState('');
@@ -156,7 +156,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-primary rounded-full animate-pulse"></div>
               <div className="absolute inset-2 bg-background rounded-full overflow-hidden">
                 <img 
-                  src={profileImage}
+                  src="/lovable-uploads/f80f02f6-b1b0-4756-9b8e-4d7c08b42555.png"
                   alt="Gajula Manikkumar Reddy"
                   className="w-full h-full object-cover rounded-full"
                 />
