@@ -61,7 +61,34 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Portfolio specific color tokens
+				'cyan-glow': 'hsl(var(--cyan-glow))',
+				'purple-glow': 'hsl(var(--purple-glow))',
+				'orange-glow': 'hsl(var(--orange-glow))',
+				'green-glow': 'hsl(var(--green-glow))',
+				'blue-glow': 'hsl(var(--blue-glow))',
+				'yellow-glow': 'hsl(var(--yellow-glow))',
+				'pink-glow': 'hsl(var(--pink-glow))'
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-skill-java': 'var(--gradient-skill-java)',
+				'gradient-skill-python': 'var(--gradient-skill-python)',
+				'gradient-skill-html': 'var(--gradient-skill-html)',
+				'gradient-skill-css': 'var(--gradient-skill-css)',
+				'gradient-skill-js': 'var(--gradient-skill-js)'
+			},
+			boxShadow: {
+				'cyan': 'var(--shadow-cyan)',
+				'purple': 'var(--shadow-purple)',
+				'card': 'var(--shadow-card)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'spring': 'var(--transition-spring)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

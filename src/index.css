@@ -2,41 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Portfolio Design System - Dark cyberpunk theme with gradients */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark cyberpunk color palette */
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 222 84% 5%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 263 72% 60%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 32% 18%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 32% 18%;
+    --input: 217 32% 18%;
+    --ring: 180 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Portfolio specific colors */
+    --cyan-glow: 180 100% 50%;
+    --purple-glow: 263 72% 60%;
+    --orange-glow: 25 95% 53%;
+    --green-glow: 142 71% 45%;
+    --blue-glow: 217 91% 60%;
+    --yellow-glow: 48 96% 50%;
+    --pink-glow: 330 81% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--cyan-glow)), hsl(var(--purple-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 5%), hsl(237 84% 15%), hsl(263 72% 20%));
+    --gradient-card: linear-gradient(135deg, hsla(222, 84%, 5%, 0.5), hsla(217, 32%, 18%, 0.3));
+    --gradient-skill-java: linear-gradient(135deg, hsl(var(--orange-glow)), hsl(0 84% 50%));
+    --gradient-skill-python: linear-gradient(135deg, hsl(var(--blue-glow)), hsl(var(--green-glow)));
+    --gradient-skill-html: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 43%));
+    --gradient-skill-css: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%));
+    --gradient-skill-js: linear-gradient(135deg, hsl(var(--yellow-glow)), hsl(48 96% 40%));
+    
+    /* Shadows and glows */
+    --shadow-cyan: 0 0 40px hsla(var(--cyan-glow), 0.3);
+    --shadow-purple: 0 0 40px hsla(var(--purple-glow), 0.3);
+    --shadow-card: 0 10px 30px -10px hsla(var(--cyan-glow), 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
