@@ -431,18 +431,15 @@ const Index = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button
-                variant="secondary"
-                size="lg"
-                className="px-8 py-4 text-lg rounded-full shadow-card transition-smooth"
-                onClick={() => {
-                  // Placeholder for resume download - user will need to upload the actual file
-                  console.log('Resume download clicked');
-                }}
+              <a
+                href="https://file.io/a1b2C3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-8 py-4 text-lg rounded-full shadow-lg transition"
               >
-                <Download className="w-5 h-5 mr-2" />
-                Download Resume
-              </Button>
+                <Download className="w-5 h-5" />
+                View Resume
+              </a>
             </motion.div>
           </motion.div>
         </div>
