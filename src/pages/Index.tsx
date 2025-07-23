@@ -444,11 +444,22 @@ const Index = () => {
                       src="/lovable-uploads/880fb71a-cd7c-4012-a1be-97bde6d865e8.png"
                       alt="Manikumar Reddy Gajula Resume"
                       className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow"
-                      onClick={() => {
-                        const link = document.createElement('a');
-                        link.href = '/lovable-uploads/880fb71a-cd7c-4012-a1be-97bde6d865e8.png';
-                        link.download = 'Manikumar_Reddy_Gajula_Resume.png';
-                        link.click();
+                      onClick={async () => {
+                        try {
+                          const response = await fetch('/lovable-uploads/880fb71a-cd7c-4012-a1be-97bde6d865e8.png');
+                          const blob = await response.blob();
+                          const url = window.URL.createObjectURL(blob);
+                          const link = document.createElement('a');
+                          link.href = url;
+                          link.download = 'Manikumar_Reddy_Gajula_Resume.png';
+                          document.body.appendChild(link);
+                          link.click();
+                          document.body.removeChild(link);
+                          window.URL.revokeObjectURL(url);
+                        } catch (error) {
+                          console.error('Download failed:', error);
+                          window.open('/lovable-uploads/880fb71a-cd7c-4012-a1be-97bde6d865e8.png', '_blank');
+                        }
                       }}
                     />
                   </CardContent>
@@ -462,14 +473,31 @@ const Index = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Button
-                onClick={() => {
+                onClick={async () => {
                   setShowResume(true);
-                  setTimeout(() => {
+                  try {
+                    // Create a temporary link and trigger download
+                    const response = await fetch('/lovable-uploads/880fb71a-cd7c-4012-a1be-97bde6d865e8.png');
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'Manikumar_Reddy_Gajula_Resume.png';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    window.URL.revokeObjectURL(url);
+                  } catch (error) {
+                    console.error('Download failed:', error);
+                    // Fallback to direct link method
                     const link = document.createElement('a');
                     link.href = '/lovable-uploads/880fb71a-cd7c-4012-a1be-97bde6d865e8.png';
                     link.download = 'Manikumar_Reddy_Gajula_Resume.png';
+                    link.target = '_blank';
+                    document.body.appendChild(link);
                     link.click();
-                  }, 500);
+                    document.body.removeChild(link);
+                  }
                 }}
                 className="bg-gradient-primary hover:shadow-cyan text-primary-foreground px-8 py-4 text-lg rounded-full shadow-lg transition-smooth"
               >
