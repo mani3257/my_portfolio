@@ -55,7 +55,7 @@ const Index = () => {
     {
       degree: 'B.Tech in CSE (Data Science)',
       duration: '2022 – 2026',
-      score: 'CGPA: 8.95',
+      score: 'CGPA: 8.88',
       institution: 'Madanapalle Institute of Technology & Science',
       highlight: 'Worked on projects and solved 100+ coding problems'
     },
@@ -487,7 +487,7 @@ const Index = () => {
                     <h3 className="text-xl font-bold text-foreground mb-2">LinkedIn</h3>
                     <p className="text-muted-foreground text-sm">manikumar-reddy-gajula</p>
                     <Button
-                      onClick={() => window.open('https://linkedin.com/in/manikumar-reddy-gajula-06b3b6273', '_blank')}
+                      onClick={() => window.open('https://www.linkedin.com/in/gajula-manikumar-reddy-06b3b6273', '_blank')}
                       variant="secondary"
                       className="mt-4 w-full"
                     >
