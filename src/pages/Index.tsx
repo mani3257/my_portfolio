@@ -23,10 +23,10 @@ const Index = () => {
   }, []);
 
   const skills = [
-    { name: 'Java', percentage: 90 },
-    { name: 'Python', percentage: 70 },
-    { name: 'HTML', percentage: 60 },
-    { name: 'CSS', percentage: 60 },
+    { name: 'Java', percentage: 70 },
+    { name: 'Python', percentage: 50 },
+    { name: 'HTML', percentage: 40 },
+    { name: 'CSS', percentage: 40 },
     { name: 'JavaScript', percentage: 40 }
   ];
 
