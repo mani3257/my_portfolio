@@ -427,20 +427,64 @@ const Index = () => {
             <p className="text-muted-foreground mb-8 text-lg">
               Download my resume to learn more about my experience and skills.
             </p>
+            
+            {/* Resume Image Preview */}
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              className="max-w-2xl mx-auto mb-8"
             >
-              <a
-                href="https://file.io/a1b2C3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-8 py-4 text-lg rounded-full shadow-lg transition"
-              >
-                <Download className="w-5 h-5" />
-                View Resume
-              </a>
+              <Card className="bg-gradient-card backdrop-blur-md border border-primary/20 hover:border-primary/40 transition-smooth overflow-hidden">
+                <CardContent className="p-4">
+                  <img 
+                    src="/lovable-uploads/880fb71a-cd7c-4012-a1be-97bde6d865e8.png"
+                    alt="Manikumar Reddy Gajula Resume"
+                    className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/lovable-uploads/880fb71a-cd7c-4012-a1be-97bde6d865e8.png';
+                      link.download = 'Manikumar_Reddy_Gajula_Resume.png';
+                      link.click();
+                    }}
+                  />
+                </CardContent>
+              </Card>
             </motion.div>
+
+            {/* Download Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/lovable-uploads/880fb71a-cd7c-4012-a1be-97bde6d865e8.png';
+                    link.download = 'Manikumar_Reddy_Gajula_Resume.png';
+                    link.click();
+                  }}
+                  className="bg-gradient-primary hover:shadow-cyan text-primary-foreground px-8 py-4 text-lg rounded-full shadow-lg transition-smooth"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Resume Image
+                </Button>
+              </motion.div>
+              
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <a
+                  href="https://file.io/a1b2C3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-8 py-4 text-lg rounded-full shadow-lg transition"
+                >
+                  <Download className="w-5 h-5" />
+                  View Resume PDF
+                </a>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
