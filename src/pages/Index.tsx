@@ -36,19 +36,22 @@ const Index = () => {
       title: 'Currency Converter',
       description: 'Real-time global converter with clean UI',
       tech: 'HTML, CSS, JavaScript',
-      features: 'API integration, responsive layout'
+      features: 'API integration, responsive layout',
+      url: 'https://currency-converter-1-ten.vercel.app/'
     },
     {
       title: 'Return Calculator',
       description: 'Computes returns based on principal, rate, and time',
       tech: 'HTML, JavaScript, Chart.js',
-      features: 'Result chart, dynamic UI, validation'
+      features: 'Result chart, dynamic UI, validation',
+      url: 'https://investment-return-calculator-theta.vercel.app/'
     },
     {
       title: 'E-Commerce Website',
       description: 'Online shopping layout with product cards and cart feature',
       tech: 'HTML, CSS, JS',
-      features: 'Add to cart animation, price updates, mobile-first UI'
+      features: 'Add to cart animation, price updates, mobile-first UI',
+      url: 'https://my-grocery-mart.vercel.app/'
     }
   ];
 
@@ -282,10 +285,18 @@ const Index = () => {
                         </h3>
                       </div>
                       <p className="text-muted-foreground mb-4">{project.description}</p>
-                      <div className="space-y-2">
+                      <div className="space-y-2 mb-4">
                         <p className="text-sm"><span className="text-primary">Tech:</span> {project.tech}</p>
                         <p className="text-sm"><span className="text-primary">Features:</span> {project.features}</p>
                       </div>
+                      <Button
+                        onClick={() => window.open(project.url, '_blank')}
+                        variant="secondary"
+                        className="w-full group-hover:scale-105 transition-transform duration-300"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        View Live
+                      </Button>
                     </CardContent>
                   </Card>
                 </motion.div>
